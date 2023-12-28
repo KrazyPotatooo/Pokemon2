@@ -5,9 +5,10 @@
   <main class="center-content">
     <div class="base">
       <div class="home">
-        <img id="pokemonImage" src="{% static 'images/pokemo2.png' %}" alt="Pokemon Title" class="pokemon-image styled-image" />
-        <h1>Welcome To The World of Pokemon Cards</h1>
-        <h3>"Explore the fascinating world of Pokemon Cards and collect 'em all!"</h3>
+        <img id="pokemonImage" src="/static/images/Pokemon4.gif" alt="Pokemon" class="pokemon-image styled-image" />
+
+        <h1>Welcome To The Pokemon World</h1>
+        <h3>"Explore the fascinating world of Pokemon!"</h3>
       </div>
     </div>
     <section class="home-content"></section>
@@ -59,28 +60,28 @@
 
   <!-- Include scripts at the end of the file -->
   <script>
-    // JavaScript to change the image randomly
     document.addEventListener("DOMContentLoaded", function() {
       const images = [
-        "{% static 'images/pokemon1.png' %}",
-        "{% static 'images/pokemon2.jpg' %}",
-        "{% static 'images/pokemon3.jpg' %}",
+        "/static/images/Pokemon3.gif",
+        "/static/images/Pokemon2.gif",
+        "/static/images/Pokemon5.gif",
         // Add more image paths as needed
       ];
-
+  
       var pokemonImage = document.getElementById("pokemonImage");
-
+  
       function getRandomImage() {
         var randomIndex = Math.floor(Math.random() * images.length);
         return images[randomIndex];
       }
-
+  
       function changeImage() {
         pokemonImage.src = getRandomImage();
       }
-
+  
       // Change the image every 5 seconds (5000 milliseconds)
       setInterval(changeImage, 5000);
     });
   </script>
+
 {% endblock %}

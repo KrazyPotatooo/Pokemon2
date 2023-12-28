@@ -23,7 +23,7 @@ main {
 
 /*NAVBAR*/
 .navbar {
-  background-color: red;
+  background-color:#45c8f1;
   overflow: hidden;
   text-align: center;
   position: sticky;
@@ -59,7 +59,7 @@ footer {
   position: fixed;
   height: 20vh;
   width: 100%;
-  background-color: red;
+  background-color: #45c8f1;
   color: white;
   bottom: 0;
   text-align: center;
