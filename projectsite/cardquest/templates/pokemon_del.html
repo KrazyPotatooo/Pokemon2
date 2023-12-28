@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+    {% load static %}
+    {% block content %}
+    <div class="card-body ">
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-row ">
+                <p>Are you sure you want to delete "{{ object }}"?</p>
+            {% include 'includes/form.html' %}
+            </div>
+            <input class="col-md-4 btn btn-primary" type="submit" value="Confirm">
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+    <title>{% block title %} CardQuest Master {% endblock %}</title>
+  </head>
+  <body>
+
+    <!-- navbar -->
+    <section class="navbar">
+      <a href="{% url 'home' %}" class="btn" id="active"> Home </a>
+      <a href="{% url 'trainer-list' %}" class="btn"> Trainer </a>
+      <a href="{% url 'pokemoncard-list' %}" class="btn"> Pokemon Card </a>
+      <a href="{% url 'collection-list' %}" class="btn"> Collection </a>
+    </section>
+
+    <!-- Main content of your webpage -->
+    <main>
+      {% block content %}
+
+      {% endblock%}
+    </main>
+
+    {% include 'includes/footer.html' %}
+
+  </body>
+</html>

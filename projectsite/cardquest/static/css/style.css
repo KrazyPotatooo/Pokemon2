@@ -1,0 +1,544 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: 'Roboto Slab';
+}
+
+body {
+  /* background-color: #d3d3d3; */
+  background-image: url('../images/bg.png');
+  background-size: cover; /* This property ensures the image covers the entire body */
+  background-position: center;
+  background-attachment: fixed; /* Set the background position as fixed */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding-top: 60px;
+  padding-bottom: 60px; /* Adjust as needed */
+}
+
+/*NAVBAR*/
+.navbar {
+  background-color: red;
+  overflow: hidden;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar a {
+  margin: 5px;
+  float: none;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  border-radius: 10px;
+  background-color: whitesmoke;
+  color: black;
+  transition: 0.2s;
+}
+
+.navbar #active {
+  border-radius: 10px;
+  background-color: whitesmoke;
+  color: black;
+}
+
+/*FOOTER*/
+footer {
+  position: fixed;
+  height: 20vh;
+  width: 100%;
+  background-color: red;
+  color: white;
+  bottom: 0;
+  text-align: center;
+}
+
+/*-----------------------------HOME_PAGE---------------------------------------*/
+/*CONTENT*/
+.home-content {
+  min-height: 100vh;
+}
+
+/*-----------------------------TRAINER_PAGE------------------------------------*/
+/*TRAINERS*/
+.trainers-container {
+  min-height: auto;
+  border-collapse: collapse;
+  margin: 1%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.trainers-container table {
+  border-collapse: collapse;
+  background-color: white;
+  border: 2px solid #dddddd;
+}
+
+.trainers-container th,
+.trainers-container td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.trainers-container th {
+  background-color: white;
+}
+
+.trainers-container td pre {
+  margin: 0;
+}
+
+.trainers-container td b {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.trainers-container td b {
+  color: #000000;
+}
+
+/*-----------------------------COLLECTION_PAGE---------------------------------*/
+.collection-container {
+  min-height: auto;
+  border-collapse: collapse;
+  margin: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collection-container table {
+  border-collapse: collapse;
+  background-color: white;
+  border: 2px solid #dddddd;
+}
+
+.collection-container th,
+.collection-container td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.collection-container th {
+  background-color: white;
+}
+
+.collection-container td pre {
+  margin: 0;
+}
+
+.collection-container td b {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.collection-container td b {
+  color: #000000;
+}
+
+/* Style for trainer and collection table */
+.styled-table {
+  width: 80%;
+  border-collapse: collapse;
+  border: 1px solid #ddd; /* Border for the table */
+}
+
+/* Style for table headers */
+.styled-table th {
+  background-color: #f2f2f2; /* Header background color */
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd; /* Border for the header cells */
+}
+
+/* Style for table data cells */
+.styled-table td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd; /* Border for the data cells */
+}
+
+/* Alternate row background color */
+.styled-table tbody tr:nth-child(even) {
+  background-color: #ffdddd; /* Light red color for even rows */
+}
+
+/* Alternate row background color for odd rows (to maintain white color) */
+.styled-table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* White color for odd rows */
+}
+
+/*-----------------------------POKEMON_CARD_PAGE-------------------------------*/
+/*CARDS*/
+.cards-container {
+  min-height: auto;
+  /* border-collapse: collapse; */
+  margin: 1%;
+  /* display: flex; */
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 160px;
+}
+
+.card-box {
+  display: inline-block;
+  padding: 2%;
+  width: 25%;
+  max-width: 400px;
+  height: 50%;
+  max-height: 480;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .card-box {
+    width: 45%;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-box {
+    width: 100%;
+  }
+}
+
+.card {
+  border-radius: 15px;
+  text-align: left;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card:hover {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.9);
+  transition: 0.2s;
+}
+
+.card .card-image,
+.card .card-name,
+.card h2 {
+  text-align: center;
+}
+
+.card hr {
+  border: solid 1px black;
+}
+
+.card .card-type {
+  padding: 7%;
+  border-radius: 15px;
+}
+
+.card .card-image {
+  border-radius: 7.5px;
+  border: solid 1px black;
+}
+
+.card img {
+  width: 75%;
+}
+
+.card .card-name .sbs {
+  display: inline-block;
+}
+
+.card #card-number {
+  color: grey;
+}
+
+.card .card-stats th {
+  text-align: right;
+}
+
+/*CARD RARITIES*/
+.card-rarity .rarity {
+  display: inline-block;
+}
+
+.card-rarity #common-text {
+  color: #b69121;
+}
+
+.card-rarity #uncommon-text {
+  color: #208b3a;
+}
+
+.card-rarity #rare-text {
+  color: #8b0000;
+}
+
+/*CARD TYPES*/
+/*card background and border*/
+.card-type,
+#normal {
+  background-color: #fff5d2;
+  border: solid 10px #c0b89e;
+}
+
+.card-type,
+#fire {
+  background-color: #e6bfb3;
+  border: solid 10px #bb340e;
+}
+
+.card-type,
+#fighting {
+  background-color: #dda7a8;
+  border: solid 10px #881415;
+}
+
+.card-type,
+#water {
+  background-color: #b7c3e4;
+  border: solid 10px #3355b6;
+}
+
+.card-type,
+#flying {
+  background-color: #b0d3e4;
+  border: solid 10px #2e6a87;
+}
+
+.card-type,
+#grass {
+  background-color: #a8dfa7;
+  border: solid 10px #247123;
+}
+
+.card-type,
+#poison {
+  background-color: #e2b4e0;
+  border: solid 10px #6f006c;
+}
+
+.card-type,
+#electric {
+  background-color: #eadcb7;
+  border: solid 10px #c4a349;
+}
+
+.card-type,
+#ground {
+  background-color: #ddbba0;
+  border: solid 10px #6e380c;
+}
+
+.card-type,
+#psychic {
+  background-color: #e5b7d4;
+  border: solid 10px #a91074;
+}
+
+.card-type,
+#rock {
+  background-color: #e2d2a7;
+  border: solid 10px #876c27;
+}
+
+.card-type,
+#ice {
+  background-color: #bae6e0;
+  border: solid 10px #339085;
+}
+
+.card-type,
+#bug {
+  background-color: #d0e5b0;
+  border: solid 10px #445826;
+}
+
+.card-type,
+#dragon {
+  background-color: #bfb8ea;
+  border: solid 10px #3d327d;
+}
+
+.card-type,
+#ghost {
+  background-color: #c3bce3;
+  border: solid 10px #614dbc;
+}
+
+.card-type,
+#dark {
+  background-color: #e7bcb6;
+  border: solid 10px #3d1a15;
+}
+
+.card-type,
+#steel {
+  background-color: #bcd5ea;
+  border: solid 10px #2d5171;
+}
+
+.card-type,
+#fairy {
+  background-color: #eac3d8;
+  border: solid 10px #cd1179;
+}
+
+/*image backgroung*/
+.card-image,
+#normal-img {
+  background: radial-gradient(circle, transparent, #c0b89e);
+}
+
+.card-image,
+#fire-img {
+  background: radial-gradient(circle, transparent, #bb340e);
+}
+
+.card-image,
+#fighting-img {
+  background: radial-gradient(circle, transparent, #881415);
+}
+
+.card-image,
+#water-img {
+  background: radial-gradient(circle, transparent, #3355b6);
+}
+
+.card-image,
+#flying-img {
+  background: radial-gradient(circle, transparent, #2e6a87);
+}
+
+.card-image,
+#grass-img {
+  background: radial-gradient(circle, transparent, #247123);
+}
+
+.card-image,
+#poison-img {
+  background: radial-gradient(circle, transparent, #6f006c);
+}
+
+.card-image,
+#electric-img {
+  background: radial-gradient(circle, transparent, #c4a349);
+}
+
+.card-image,
+#ground-img {
+  background: radial-gradient(circle, transparent, #6e380c);
+}
+
+.card-image,
+#psychic-img {
+  background: radial-gradient(circle, transparent, #a91074);
+}
+
+.card-image,
+#rock-img {
+  background: radial-gradient(circle, transparent, #876c27);
+}
+
+.card-image,
+#ice-img {
+  background: radial-gradient(circle, transparent, #339085);
+}
+
+.card-image,
+#bug-img {
+  background: radial-gradient(circle, transparent, #445826);
+}
+
+.card-image,
+#dragon-img {
+  background: radial-gradient(circle, transparent, #3d327d);
+}
+
+.card-image,
+#ghost-img {
+  background: radial-gradient(circle, transparent, #614dbc);
+}
+
+.card-image,
+#dark-img {
+  background: radial-gradient(circle, transparent, #3d1a15);
+}
+
+.card-image,
+#steel-img {
+  background: radial-gradient(circle, transparent, #2d5171);
+}
+
+.card-image,
+#fairy-img {
+  background: radial-gradient(circle, transparent, #cd1179);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.page-item {
+  margin-right: 5px;
+}
+
+.page-link {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 1px solid #dee2e6;
+  color: #007bff;
+  background-color: #fff;
+}
+
+.page-link:hover {
+  background-color: #f0f0f0;
+}
+
+/* Adjusted selectors to accommodate classes with spaces */
+.page-item.disabled {
+  /* Styles for disabled pagination item */
+  color: #6c757d;
+  pointer-events: none;
+  cursor: not-allowed;
+  background-color: #fff;
+  border-color: #dee2e6;
+}
+
+.page-item.active {
+  /* Styles for active pagination item */
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  z-index: 3;
+}
+
+/* Social Icons for footer */
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  /* Add other styling properties as needed */
+}
+
+/* Hover effect for the links */
+.social-icons a:hover {
+  color: #ffffff; /* Change color on hover if desired */
+  /* Add additional hover effects */
+}

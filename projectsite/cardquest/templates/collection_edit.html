@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+    {% load static %}
+    {% block content %}
+    <form role="form" class="" action="" method="post" novalidate>
+        {% csrf_token %}
+        {% include 'includes/form.html' %}
+        <br />
+        <div class="form-group">
+            <div class="col-md-12 col-sm-3">
+                <button type='submit' class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

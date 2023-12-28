@@ -1,0 +1,84 @@
+{
+    "pokemons": [
+    {
+    "name": "Pikachu",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
+    },
+    {
+    "name": "Charmeleon",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png"
+    },
+    {
+    "name": "Mewtwo",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png"
+    },
+    {
+    "name": "Caterpie",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+    },
+    {
+    "name": "Squirtle",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+    },
+    {
+    "name": "Eevee",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png"
+    },
+    {
+    "name": "Snorlax",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png"
+    },
+    {
+    "name": "Raikou",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/243.png"
+    },
+    {
+    "name": "Cryogonal",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/615.png"
+    },
+    {
+    "name": "Pancham",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/674.png"
+    },
+    {
+    "name": "Entei",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/244.png"
+    },
+        {
+    "name": "Suicune",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/245.png"
+    },
+    {
+    "name": "Mudkip",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/258.png"
+    },
+    {
+    "name": "Meowth",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png"
+    },
+    {
+    "name": "Jigglypuff",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png"
+    },
+    {
+    "name": "Duskull",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/355.png"
+    },
+    {
+    "name": "Wobbuffet",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/202.png"
+    },
+    {
+    "name": "Darkrai",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/491.png"
+    },
+    {
+    "name": "Totodile",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/158.png"
+    },
+    {
+    "name": "Deoxys",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/386.png"
+    }
+    ]
+    }

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <main class="center-content">
+    <div class="base">
+      <div class="home">
+        <img id="pokemonImage" src="{% static 'images/pokemo2.png' %}" alt="Pokemon Title" class="pokemon-image styled-image" />
+        <h1>Welcome To The World of Pokemon Cards</h1>
+        <h3>"Explore the fascinating world of Pokemon Cards and collect 'em all!"</h3>
+      </div>
+    </div>
+    <section class="home-content"></section>
+  </main>
+
+  <!-- Separate CSS Styles -->
+  <style>
+    /* Center the content horizontally and vertically */
+    .center-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Set the height of the container to the viewport height */
+    }
+
+    /* Styles for the base container */
+    .base {
+      text-align: center;
+    }
+
+    /* Styles for the home container */
+    .home {
+      margin: 40px; /* Add some margin for spacing */
+    }
+
+    /* Styles for the styled image */
+    .styled-image {
+      width: 380px;
+      height: 380px;
+      border-radius: 50%; /* Make the image round */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      transition: transform 0.2s ease-in-out; /* Add a smooth transition effect */
+    }
+
+    .styled-image:hover {
+      transform: scale(1.1); /* Add a slight scale effect on hover */
+    }
+
+    /* Additional styles for the headings */
+    h1, h3 {
+      color: #333; /* Set text color to a dark shade */
+    }
+
+    /* Add some styles for the home-content section if needed */
+    /* .home-content { */
+      /* Add your styles for the home-content section here */
+    /* } */
+  </style>
+
+  <!-- Include scripts at the end of the file -->
+  <script>
+    // JavaScript to change the image randomly
+    document.addEventListener("DOMContentLoaded", function() {
+      const images = [
+        "{% static 'images/pokemon1.png' %}",
+        "{% static 'images/pokemon2.jpg' %}",
+        "{% static 'images/pokemon3.jpg' %}",
+        // Add more image paths as needed
+      ];
+
+      var pokemonImage = document.getElementById("pokemonImage");
+
+      function getRandomImage() {
+        var randomIndex = Math.floor(Math.random() * images.length);
+        return images[randomIndex];
+      }
+
+      function changeImage() {
+        pokemonImage.src = getRandomImage();
+      }
+
+      // Change the image every 5 seconds (5000 milliseconds)
+      setInterval(changeImage, 5000);
+    });
+  </script>
+{% endblock %}

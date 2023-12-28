@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<a href="{% url 'pokemon-add' %}" class="btn btn-outline-primary">Add New Pokemon</a><br>
+<section class="cards-container">
+ <!-- Display Pokemon Cards -->
+{% for card in pokemoncard %}
+<div class="card-box">
+  <div class="card">
+    <div class="card-type" id="{{ card.card_type|lower }}">
+      <div class="card-image" id="{{ card.card_type|lower }}-img">
+        {% for pokemon in pokemon_data %}
+        {% if pokemon.name == card.name %}
+          <img src="{{ pokemon.image_url }}" alt="{{ pokemon.name }} Image">
+        {% endif %}
+      {% endfor %}
+      </div>
+      <div class="card-name">
+        <h2 class="sbs">{{ card.name}}</h2>
+        <h2 class="sbs" id="card-number">#00{{ card.card_number}}</h2>
+        <hr />
+      </div>
+      <div class="card-rarity">
+        <h3 class="rarity">Rarity:</h3>
+        <h3 class="rarity" id="rare-text">{{ card.rarity }}</h3>
+      </div>
+      <table class="card-stats">
+        <tbody>
+          <tr>
+            <th>HP:</th>
+            <td>{{ card.hp }}</td>
+          </tr>
+          <tr>
+            <th>Card Type:</th>
+            <td>{{ card.card_type }}</td>
+          </tr>
+          <tr>
+            <th>Attack:</th>
+            <td>{{ card.attack }}</td>
+          </tr>
+          <tr>
+            <th>Description:</th>
+            <td style="word-wrap: break-word; white-space: pre-wrap;">{{ card.description }}</td>
+          </tr>
+          <tr>
+            <th>Weakness:</th>
+            <td>{{ card.weakness }}</td>
+          </tr>
+          <tr>
+            <th>Card Number:</th>
+            <td>{{ card.card_number }}</td>
+          </tr>
+          <tr>
+            <th>Release Date:</th>
+            <td>{{ card.release_date }}</td>
+          </tr>
+          <tr>
+            <th>Evolution Stage:</th>
+            <td>{{ card.evolution_stage }}</td>
+          </tr>
+          <tr>
+            <th>Abilities:</th>
+            <td>{{ card.abilities }}</td>
+          </tr>
+          <tr>
+            <th>Action:</th>
+            <td>
+              <a href="pokemoncard_list/{{ card.id }}" >Edit</a> |
+              <a href="pokemoncard_list/{{ card.id }}/delete" >Delete</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    
+    <hr />
+    </div>
+  </div>
+</div>
+{% endfor %}
+<div>
+  {% include 'includes/pagination.html' %}
+</div> 
+</section>
+{% endblock %}
